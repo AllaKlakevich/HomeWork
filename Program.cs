@@ -49,15 +49,38 @@
 
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-void Square(int n){
-    int curr = 1;
-    while(curr<=n){
-        Console.Write(curr*curr*curr + ", ");
-        curr++;
-    }
+// void Square(int n){
+//     int curr = 1;
+//     while(curr<=n){
+//         Console.Write(curr*curr*curr + ", ");
+//         curr++;
+//     }
+// }
+
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if (num <= 0) Console.Write("Некорректный ввод");
+// else Square(num);
+
+
+//  Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве
+
+double Average(double x1, double y1, double x2, double y2)
+{
+  double a = (x2-x1)*(x2-x1);
+  double b = (y2-y1)*(y2-y1);
+  double result = Math.Sqrt(a+b);
+  Console.Write("Расстояние между точкой А и В равно: " + result);
+  return result;
 }
 
-Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-if (num <= 0) Console.Write("Некорректный ввод");
-else Square(num);
+Console.Write("Введите координаты точки A x1: ");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координаты точки A y1: ");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координаты точки B x2: ");
+double x2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координаты точки B y2: ");
+double y2 = Convert.ToDouble(Console.ReadLine());
+
+Average(x1, y1, x2, y2);
